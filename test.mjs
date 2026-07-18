@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import test from "node:test";
 import {
   analyzeHeaderGroups,
@@ -60,4 +61,29 @@ test("requires at least two non-empty groups", () => {
   ]);
 
   assert.equal(result.ok, false);
+});
+
+test("publishes self-consistent search discovery files", () => {
+  const rootUrl =
+    "https://liuqi985181210-coder.github.io/excel-header-checker-cn/";
+  const key = "79a4dce811464673977824b737b55efa";
+  const index = fs.readFileSync(new URL("./index.html", import.meta.url), "utf8");
+  const robots = fs.readFileSync(
+    new URL("./robots.txt", import.meta.url),
+    "utf8",
+  );
+  const sitemap = fs.readFileSync(
+    new URL("./sitemap.xml", import.meta.url),
+    "utf8",
+  );
+  const keyFile = fs
+    .readFileSync(new URL(`./${key}.txt`, import.meta.url), "utf8")
+    .trim();
+
+  assert.match(index, new RegExp(`rel="canonical"[\\s\\S]+${rootUrl}`));
+  assert.match(index, /application\/ld\+json/);
+  assert.match(robots, /User-agent: \*/);
+  assert.match(robots, /sitemap\.xml/);
+  assert.match(sitemap, new RegExp(`<loc>${rootUrl}</loc>`));
+  assert.equal(keyFile, key);
 });

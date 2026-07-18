@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liuqi985181210-coder.github.io/excel-header-checker-cn/sitemap.xml
