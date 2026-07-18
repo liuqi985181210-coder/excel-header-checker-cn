@@ -18,7 +18,8 @@
 
 ## 在线使用
 
-[打开在线表头检查器](https://excel-local-tools.liuqi985181210.chatgpt.site/excel-header-compatibility-checker)
+- [主站版：打开在线表头检查器](https://excel-local-tools.liuqi985181210.chatgpt.site/excel-header-compatibility-checker)
+- [GitHub Pages 开源镜像](https://liuqi985181210-coder.github.io/excel-header-checker-cn/)
 
 ## 需要重复运行的固定流程
 
