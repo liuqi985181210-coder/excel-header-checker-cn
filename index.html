@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="无需上传 Excel，只粘贴字段名称，在浏览器本地检查多个表头能否直接合并、需要补列还是字段映射。"
+    />
+    <title>Excel 多表合并表头检查器</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="https://excel-local-tools.liuqi985181210.chatgpt.site">
+        <span>表</span>
+        表格自动化工作室
+      </a>
+      <a
+        class="service-link"
+        href="https://excel-local-tools.liuqi985181210.chatgpt.site/excel-multi-file-merge"
+      >
+        查看多表合并服务
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">免费 · 浏览器本地运行 · 不需要登录</p>
+        <h1>Excel 多表合并前，先检查表头。</h1>
+        <p>
+          不上传 Excel，不保存粘贴内容。只填写两份表头，判断可以直接按列名合并、
+          需要补齐缺失列，还是必须先做字段映射。
+        </p>
+      </section>
+
+      <section class="checker">
+        <div class="checker-head">
+          <div>
+            <strong>只粘贴字段名称</strong>
+            <p>不要粘贴客户姓名、金额、账号或其他真实业务数据。</p>
+          </div>
+          <button id="load-example" type="button">填入虚构示例</button>
+        </div>
+
+        <form id="checker-form">
+          <div class="inputs">
+            <fieldset>
+              <label>
+                第一个文件
+                <input name="name-1" value="文件 1" maxlength="60" />
+              </label>
+              <label>
+                表头字段
+                <textarea
+                  name="headers-1"
+                  maxlength="1200"
+                  placeholder="日期, 门店, 订单号, 客户名称, 金额"
+                  required
+                ></textarea>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <label>
+                第二个文件
+                <input name="name-2" value="文件 2" maxlength="60" />
+              </label>
+              <label>
+                表头字段
+                <textarea
+                  name="headers-2"
+                  maxlength="1200"
+                  placeholder="订单号, 日期, 门店, 客户, 金额"
+                  required
+                ></textarea>
+              </label>
+            </fieldset>
+          </div>
+
+          <button class="run" type="submit">检查能否直接合并</button>
+        </form>
+
+        <div id="result" aria-live="polite"></div>
+      </section>
+
+      <section class="paid">
+        <div>
+          <p class="eyebrow">需要每周或每月重复运行？</p>
+          <h2>把固定合并规则做成 Windows 本地流程。</h2>
+          <p>
+            99 元可以买一个明确的基础处理结果；需要重复运行的本地工具 199 元起。
+            先发脱敏表头和人工步骤，再确认范围、价格和验收方式。
+          </p>
+        </div>
+        <a href="https://excel-local-tools.liuqi985181210.chatgpt.site/#contact">
+          提交脱敏需求
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>MIT 开源工具 · 不上传文件 · 不包含真实客户数据</p>
+      <a href="https://excel-local-tools.liuqi985181210.chatgpt.site">
+        excel-local-tools.liuqi985181210.chatgpt.site
+      </a>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
