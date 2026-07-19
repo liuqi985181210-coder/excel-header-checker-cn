@@ -25,12 +25,12 @@
 
 如果你每周或每月都要合并、拆分或生成对账表，可以先提交脱敏表头、人工步骤、文件数量和期望输出：
 
-[查看 Excel 多表合并与 Windows 本地流程](https://excel-local-tools.liuqi985181210.chatgpt.site/excel-multi-file-merge)
+[直接提交 Excel 多表合并与 Windows 本地流程需求](https://excel-local-tools.liuqi985181210.chatgpt.site/excel-multi-file-merge#contact)
 
 - 99 元：一个明确、可单独验收的基础处理结果；
 - 199 元起：可重复运行的固定 Windows 本地流程；
 - 复杂规则在确认脱敏样例、范围和验收方式后报价；
-- 咨询和交易在平台内完成，不要求站外付款。
+- 无需注册或扫码，直接在主站提交脱敏需求；主站不直接收款，范围、价格和验收先书面确认。
 
 ## 本地运行
 
